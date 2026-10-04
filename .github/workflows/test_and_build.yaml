@@ -23,6 +23,8 @@ jobs:
         python-version: "3.13"
     - name: Install dependencies
       run: pip install -r src/requirements.txt
+    - name: Realizar un chequeo linting
+      run: ruff check .
     - name: Test con pytest
       working-directory: src
       run: pytest tests.py
